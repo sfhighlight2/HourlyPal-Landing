@@ -263,3 +263,13 @@ p { color: var(--text-secondary); }
 .testimonial-card p { color: var(--navy); margin-bottom: 16px; }
 .testimonial-name { font-size: 0.85rem; font-weight: 700; color: var(--text-secondary); }
 @media (max-width: 900px) { .testimonial-grid { grid-template-columns: 1fr; } }
+
+.pricing-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 340px)); gap: 24px; justify-content: center; }
+.price-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 32px; box-shadow: var(--shadow-card); position: relative; }
+.price-card-featured { border-color: var(--teal); box-shadow: 0 8px 32px rgba(0,184,169,0.18); }
+.price-badge { position: absolute; top: -12px; right: 24px; background: var(--teal); color: #fff; font-size: 0.7rem; font-weight: 700; padding: 4px 12px; border-radius: var(--radius-pill); }
+.price { font-size: 2.4rem; font-weight: 800; margin: 12px 0 4px; }
+.price span { font-size: 1rem; font-weight: 600; color: var(--text-secondary); }
+.price-trial { color: var(--teal-dark); font-weight: 700; font-size: 0.85rem; margin-bottom: 20px; }
+.price-card .check-list { margin: 0 0 28px; }
+@media (max-width: 760px) { .pricing-grid { grid-template-columns: 1fr; max-width: 340px; margin: 0 auto; } }
