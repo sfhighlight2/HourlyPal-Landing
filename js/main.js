@@ -120,21 +120,26 @@ function initScrollReveals() {
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const revealEls = document.querySelectorAll('.reveal');
 
-  if (reduceMotion || typeof gsap === 'undefined') {
+  if (reduceMotion || typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
     return;
   }
 
   gsap.registerPlugin(ScrollTrigger);
-  revealEls.forEach((el, index) => {
+  revealEls.forEach((el) => {
+    const siblingIndex = Array.from(el.parentElement.children).indexOf(el);
     gsap.set(el, { opacity: 0, y: 24 });
     gsap.to(el, {
       opacity: 1,
       y: 0,
       duration: 0.7,
       ease: 'power2.out',
-      delay: (index % 4) * 0.08,
+      delay: (siblingIndex % 4) * 0.08,
       scrollTrigger: { trigger: el, start: 'top 88%' },
     });
+  });
+
+  document.querySelectorAll('img[loading="lazy"]').forEach((img) => {
+    img.addEventListener('load', () => ScrollTrigger.refresh());
   });
 }
 
