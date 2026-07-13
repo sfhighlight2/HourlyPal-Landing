@@ -170,3 +170,10 @@ p { color: var(--text-secondary); }
   .hero-sub { margin-left: auto; margin-right: auto; }
   .hero-visual { margin-top: 24px; }
 }
+
+.stats { background: var(--surface); text-align: center; padding: 64px 0; }
+.stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.stat-number { font-size: 2.6rem; font-weight: 800; color: var(--navy); font-variant-numeric: tabular-nums; }
+.stat p { margin-top: 4px; font-weight: 600; color: var(--text-secondary); }
+.stats-note { text-align: center; margin-top: 24px; font-size: 0.75rem; color: var(--text-muted); }
+@media (max-width: 700px) { .stats-grid { grid-template-columns: 1fr; gap: 24px; } }
