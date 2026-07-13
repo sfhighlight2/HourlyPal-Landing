@@ -177,3 +177,17 @@ p { color: var(--text-secondary); }
 .stat p { margin-top: 4px; font-weight: 600; color: var(--text-secondary); }
 .stats-note { text-align: center; margin-top: 24px; font-size: 0.75rem; color: var(--text-muted); }
 @media (max-width: 700px) { .stats-grid { grid-template-columns: 1fr; gap: 24px; } }
+
+.section-head { max-width: 640px; margin-bottom: 48px; }
+.features-grid { display: grid; grid-template-columns: 1fr 0.8fr; gap: 48px; align-items: center; }
+.feature-item { padding: 20px 0; border-bottom: 1px solid var(--border); }
+.feature-item:last-child { border-bottom: none; }
+.feature-item h3 { margin-bottom: 6px; }
+.features-visual { position: relative; min-height: 380px; }
+.features-visual .phone-frame { width: 220px; position: absolute; }
+.phone-frame-back { top: 0; left: 0; opacity: 0.85; }
+.phone-frame-front { top: 60px; left: 90px; }
+@media (max-width: 900px) {
+  .features-grid { grid-template-columns: 1fr; }
+  .features-visual { order: -1; min-height: 300px; margin: 0 auto 24px; }
+}
