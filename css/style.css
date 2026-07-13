@@ -191,3 +191,12 @@ p { color: var(--text-secondary); }
   .features-grid { grid-template-columns: 1fr; }
   .features-visual { order: -1; min-height: 540px; margin: 0 auto 24px; }
 }
+
+.be-a-pal { background: var(--navy); color: #fff; }
+.be-a-pal h2, .be-a-pal p { color: #fff; }
+.split-grid { display: grid; grid-template-columns: 0.8fr 1fr; gap: 48px; align-items: center; }
+.eyebrow-light { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.25); color: #7FE3D6; }
+.check-list { margin: 24px 0 32px; display: flex; flex-direction: column; gap: 14px; }
+.check-list li { position: relative; padding-left: 28px; color: rgba(255,255,255,0.85); }
+.check-list li::before { content: '✓'; position: absolute; left: 0; color: var(--teal); font-weight: 800; }
+@media (max-width: 900px) { .split-grid { grid-template-columns: 1fr; } .split-visual { order: -1; } }
