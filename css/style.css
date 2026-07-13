@@ -245,3 +245,13 @@ p { color: var(--text-secondary); }
   .how-grid { grid-template-columns: 1fr; }
   .how-visual { grid-row: auto; }
 }
+
+.trust { background: var(--navy); color: #fff; }
+.trust h2, .trust h3 { color: #fff; }
+.trust-sub { color: rgba(255,255,255,0.75); margin-top: 12px; max-width: 380px; }
+.trust-grid { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 40px; align-items: start; }
+.trust-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.trust-card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--radius-lg); padding: 24px; }
+.trust-card p { color: rgba(255,255,255,0.7); margin-top: 8px; }
+@media (max-width: 900px) { .trust-grid { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .trust-cards { grid-template-columns: 1fr; } }
