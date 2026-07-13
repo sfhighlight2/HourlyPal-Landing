@@ -255,3 +255,11 @@ p { color: var(--text-secondary); }
 .trust-card p { color: rgba(255,255,255,0.7); margin-top: 8px; }
 @media (max-width: 900px) { .trust-grid { grid-template-columns: 1fr; } }
 @media (max-width: 600px) { .trust-cards { grid-template-columns: 1fr; } }
+
+.placeholder-note { font-size: 0.8rem; color: var(--text-muted); margin-top: 8px; }
+.testimonial-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.testimonial-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 28px; }
+.stars { color: var(--warning); letter-spacing: 2px; margin-bottom: 12px; }
+.testimonial-card p { color: var(--navy); margin-bottom: 16px; }
+.testimonial-name { font-size: 0.85rem; font-weight: 700; color: var(--text-secondary); }
+@media (max-width: 900px) { .testimonial-grid { grid-template-columns: 1fr; } }
