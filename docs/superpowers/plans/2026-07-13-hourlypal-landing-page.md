@@ -1026,8 +1026,8 @@ git commit -m "Add How It Works section"
 
 - [ ] **Step 3: Verify structurally**
 
-Run: `grep -c 'class="trust-card"' index.html`
-Expected: `4`
+Run: `grep -c 'trust-card' index.html`
+Expected: `5` (4 `.trust-card` divs plus the `.trust-cards` container)
 
 Open in browser: dark navy section with intro copy on the left and a 2x2 grid of translucent safety cards on the right; single column on narrow screens.
 
