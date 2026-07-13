@@ -115,3 +115,27 @@ function initNewsletter() {
 }
 
 initNewsletter();
+
+function initScrollReveals() {
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const revealEls = document.querySelectorAll('.reveal');
+
+  if (reduceMotion || typeof gsap === 'undefined') {
+    return;
+  }
+
+  gsap.registerPlugin(ScrollTrigger);
+  revealEls.forEach((el, index) => {
+    gsap.set(el, { opacity: 0, y: 24 });
+    gsap.to(el, {
+      opacity: 1,
+      y: 0,
+      duration: 0.7,
+      ease: 'power2.out',
+      delay: (index % 4) * 0.08,
+      scrollTrigger: { trigger: el, start: 'top 88%' },
+    });
+  });
+}
+
+initScrollReveals();
