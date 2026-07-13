@@ -32,7 +32,7 @@ assets/screens/*.png           (already committed — 8 real app screenshots)
 
 Run all unit tests at any time with:
 ```bash
-node --test js/
+node --test js/*.test.mjs
 ```
 
 ---
@@ -1641,7 +1641,7 @@ git commit -m "Add accessibility focus styles, skip link, and responsive verific
 
 - [ ] **Step 1: Run the full unit test suite**
 
-Run: `node --test js/`
+Run: `node --test js/*.test.mjs`
 Expected: All suites pass (nav, counter, accordion, validate — 16 tests total).
 
 - [ ] **Step 2: Full manual walkthrough in a browser**
