@@ -1091,7 +1091,7 @@ git commit -m "Add Trust & Safety section"
 
 - [ ] **Step 3: Verify structurally**
 
-Run: `grep -c 'class="testimonial-card"' index.html`
+Run: `grep -c 'class="testimonial-card reveal"' index.html`
 Expected: `3`
 
 Open in browser: three quote cards in a row with star ratings; stacked on mobile.
