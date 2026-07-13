@@ -183,11 +183,11 @@ p { color: var(--text-secondary); }
 .feature-item { padding: 20px 0; border-bottom: 1px solid var(--border); }
 .feature-item:last-child { border-bottom: none; }
 .feature-item h3 { margin-bottom: 6px; }
-.features-visual { position: relative; min-height: 380px; }
-.features-visual .phone-frame { width: 220px; position: absolute; }
+.features-visual { position: relative; min-height: 540px; }
+.features-visual .phone-frame { width: 220px; position: absolute; margin: 0; }
 .phone-frame-back { top: 0; left: 0; opacity: 0.85; }
 .phone-frame-front { top: 60px; left: 90px; }
 @media (max-width: 900px) {
   .features-grid { grid-template-columns: 1fr; }
-  .features-visual { order: -1; min-height: 300px; margin: 0 auto 24px; }
+  .features-visual { order: -1; min-height: 540px; margin: 0 auto 24px; }
 }
