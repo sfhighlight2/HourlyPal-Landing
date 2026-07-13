@@ -778,12 +778,13 @@ git commit -m "Add Be a Pal section"
 
 ```css
 .hire-a-pal { background: var(--white); }
-.split-grid-reverse .split-visual { order: 2; }
-.check-list-dark li { color: var(--text-secondary); }
-@media (max-width: 900px) {
-  .split-grid-reverse .split-visual { order: -1; }
+@media (min-width: 901px) {
+  .split-grid-reverse { grid-template-columns: 1fr 0.8fr; }
 }
+.check-list-dark li { color: var(--text-secondary); }
 ```
+
+Note: `.split-grid` (from Task 6) sets `grid-template-columns: 0.8fr 1fr` — a narrow first track for the phone visual, wide second track for copy. In this section the DOM order is reversed (copy first, then visual), so without an override the copy would land in the narrow track and the visual in the wide track — backwards. `.split-grid-reverse` flips the column-width assignment (`1fr 0.8fr`) to match the swapped DOM order, so copy still gets the wide track and the visual still gets the narrow track regardless of which side of the DOM they're on. This override is wrapped in `@media (min-width: 901px)` so it only applies above the mobile breakpoint — otherwise, since `.split-grid-reverse` and `.split-grid` have equal CSS specificity and `.split-grid-reverse` would be defined later in the stylesheet, it would incorrectly win over Task 6's `@media (max-width: 900px) { .split-grid { grid-template-columns: 1fr; } }` mobile collapse rule and break single-column stacking on mobile. No `order` property is needed for stacking — Task 6's existing mobile rule `@media (max-width: 900px) { .split-visual { order: -1; } }` is not scoped to `.split-grid` specifically, so it already applies to this section's `.split-visual` too and stacks it on top on mobile, consistent with the Be a Pal section.
 
 - [ ] **Step 3: Verify structurally**
 
