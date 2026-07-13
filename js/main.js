@@ -2,6 +2,7 @@
 import { computeNavState } from './nav.js';
 import { countUpValue } from './counter.js';
 import { nextAccordionIndex } from './accordion.js';
+import { isValidEmail } from './validate.js';
 
 function initNav() {
   const header = document.getElementById('siteHeader');
@@ -94,3 +95,23 @@ function initFaq() {
 }
 
 initFaq();
+
+function initNewsletter() {
+  const form = document.getElementById('newsletterForm');
+  const input = document.getElementById('newsletterEmail');
+  const message = document.getElementById('newsletterMessage');
+
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (!isValidEmail(input.value)) {
+      message.textContent = 'Please enter a valid email address.';
+      message.className = 'form-message is-error';
+      return;
+    }
+    message.textContent = "You're on the list — thanks for signing up!";
+    message.className = 'form-message is-success';
+    form.reset();
+  });
+}
+
+initNewsletter();
