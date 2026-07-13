@@ -273,3 +273,17 @@ p { color: var(--text-secondary); }
 .price-trial { color: var(--teal-dark); font-weight: 700; font-size: 0.85rem; margin-bottom: 20px; }
 .price-card .check-list { margin: 0 0 28px; }
 @media (max-width: 760px) { .pricing-grid { grid-template-columns: 1fr; max-width: 340px; margin: 0 auto; } }
+
+.faq-list { max-width: 720px; margin: 0 auto; border-top: 1px solid var(--border); }
+.faq-item { border-bottom: 1px solid var(--border); }
+.faq-question {
+  width: 100%;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 4px;
+  font-size: 1rem; font-weight: 700; color: var(--navy);
+  text-align: left;
+}
+.faq-icon { font-size: 1.2rem; color: var(--teal-dark); transition: transform .2s ease; }
+.faq-question[aria-expanded="true"] .faq-icon { transform: rotate(45deg); }
+.faq-answer { max-height: 0; overflow: hidden; transition: max-height .25s ease; }
+.faq-answer p { padding: 0 4px 20px; }

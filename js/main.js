@@ -1,6 +1,7 @@
 // js/main.js
 import { computeNavState } from './nav.js';
 import { countUpValue } from './counter.js';
+import { nextAccordionIndex } from './accordion.js';
 
 function initNav() {
   const header = document.getElementById('siteHeader');
@@ -69,3 +70,27 @@ function initCounters() {
 }
 
 initCounters();
+
+function initFaq() {
+  const items = Array.from(document.querySelectorAll('.faq-item'));
+  let openIndex = null;
+
+  items.forEach((item, index) => {
+    const question = item.querySelector('.faq-question');
+    const answer = item.querySelector('.faq-answer');
+
+    question.addEventListener('click', () => {
+      openIndex = nextAccordionIndex(openIndex, index);
+
+      items.forEach((otherItem, otherIndex) => {
+        const isOpen = otherIndex === openIndex;
+        const otherQuestion = otherItem.querySelector('.faq-question');
+        const otherAnswer = otherItem.querySelector('.faq-answer');
+        otherQuestion.setAttribute('aria-expanded', String(isOpen));
+        otherAnswer.style.maxHeight = isOpen ? `${otherAnswer.scrollHeight}px` : '0px';
+      });
+    });
+  });
+}
+
+initFaq();
