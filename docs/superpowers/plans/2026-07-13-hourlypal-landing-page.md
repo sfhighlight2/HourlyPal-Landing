@@ -163,8 +163,8 @@ p { color: var(--text-secondary); }
 }
 .phone-frame img { width: 100%; height: auto; }
 
-.reveal { opacity: 0; transform: translateY(24px); }
-.reveal-visible { opacity: 1; transform: none; }
+.reveal { }
+.reveal-visible { }
 ```
 
 - [ ] **Step 3: Verify structurally**
@@ -1540,12 +1540,12 @@ function initScrollReveals() {
   const revealEls = document.querySelectorAll('.reveal');
 
   if (reduceMotion || typeof gsap === 'undefined') {
-    revealEls.forEach((el) => el.classList.add('reveal-visible'));
     return;
   }
 
   gsap.registerPlugin(ScrollTrigger);
   revealEls.forEach((el, index) => {
+    gsap.set(el, { opacity: 0, y: 24 });
     gsap.to(el, {
       opacity: 1,
       y: 0,
