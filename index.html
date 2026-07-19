@@ -3,23 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HourlyPal — Trusted local help, by the hour.</title>
+  <title>HourlyPal - Trusted local help, by the hour.</title>
   <meta name="description" content="HourlyPal connects you with background-checked local Pals for errands, training, tutoring, gardening, tours, and more. Book by the hour, message privately, pay simply.">
   <link rel="icon" href="assets/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body id="top">
   <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- Icon sprite (Lucide-style) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <g id="s-stroke" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></g>
+    </defs>
+    <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-msg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 2.9 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14l-5-4.87 7.1-1.01z"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+    <symbol id="i-privacy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"/><path d="M10.73 5.08A10.4 10.4 0 0 1 12 5c7 0 10 7 10 7a13.2 13.2 0 0 1-1.67 2.68"/><path d="M6.61 6.61A13.5 13.5 0 0 0 2 12s3 7 10 7a9.7 9.7 0 0 0 5.39-1.61"/><path d="m2 2 20 20"/></symbol>
+    <symbol id="i-ban" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.9 4.9 14.2 14.2"/></symbol>
+    <symbol id="i-card" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><path d="M2 10h20"/></symbol>
+    <symbol id="i-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></symbol>
+    <symbol id="i-activity" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol>
+    <symbol id="i-map" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.1 5.55a2 2 0 0 0 1.8 0l3.65-1.83A1 1 0 0 1 21 4.62v12.76a1 1 0 0 1-.55.9l-4.55 2.27a2 2 0 0 1-1.8 0l-4.2-2.1a2 2 0 0 0-1.8 0l-3.65 1.82A1 1 0 0 1 3 19.38V6.62a1 1 0 0 1 .55-.9L8.1 3.46a2 2 0 0 1 1.8 0z"/><path d="M15 5.76v15M9 3.24v15"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  </svg>
+
   <header class="site-header" id="siteHeader">
     <div class="announcement-bar">
-      <span aria-hidden="true">🎉</span> New: Get 2 months free when you join HourlyPal today.
+      <b>New</b>&nbsp; Get 2 months free when you join HourlyPal today.
     </div>
-    <nav class="nav container">
+    <nav class="nav">
       <a href="#top" class="nav-logo">
-        <img src="assets/logo.png" alt="HourlyPal" width="36" height="36">
+        <img src="assets/logo.png" alt="HourlyPal" width="34" height="34">
         <span>HourlyPal</span>
       </a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
@@ -32,177 +57,231 @@
         <li><a href="#pricing">Pricing</a></li>
         <li><a href="#faq">FAQ</a></li>
       </ul>
-      <a href="#download" class="btn btn-primary nav-cta">Download App</a>
+      <a href="#download" class="btn btn-dark nav-cta">Download App</a>
     </nav>
   </header>
+
   <main id="main" tabindex="-1">
+
+  <!-- HERO -->
   <section class="hero" id="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
     <div class="container hero-grid">
       <div class="hero-copy">
-        <span class="eyebrow">Now booking in your area</span>
-        <h1>Trusted local help,<br>by the hour.</h1>
-        <p class="hero-sub">HourlyPal connects you with background-checked local Pals for errands, training, tutoring, gardening, tours, and more. Book by the hour, message privately, and pay simply.</p>
+        <span class="eyebrow-pill"><b>New</b> Now booking in your area</span>
+        <h1>Be a Pal.<br><span class="accent">Hire a Pal.</span></h1>
+        <p class="hero-sub">HourlyPal is trusted local help by the hour. Background-checked Pals, private alias messaging, and no long-term commitment, whether you're booking one or becoming one.</p>
         <div class="hero-ctas">
-          <a href="#download" class="btn btn-primary">Download the App</a>
-          <a href="#how-it-works" class="btn btn-secondary">See How it Works</a>
-        </div>
-        <div class="hero-badges">
-          <span><span aria-hidden="true">✓</span> Background-checked Pals</span>
-          <span><span aria-hidden="true">✓</span> Private, alias-based messaging</span>
-          <span><span aria-hidden="true">✓</span> Book by the hour</span>
+          <a href="#download" class="btn btn-dark">Download the App</a>
+          <a href="#how-it-works" class="btn btn-light btn-play"><svg class="ico" aria-hidden="true"><use href="#i-play"/></svg> See How it Works</a>
         </div>
       </div>
-      <div class="hero-visual reveal">
-        <div class="hero-blob" aria-hidden="true"></div>
-        <div class="phone-frame">
-          <img src="assets/screens/11-client-home.png" alt="HourlyPal app showing nearby Pals to hire" loading="eager">
+      <div class="hero-visual">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <img class="hero-hand" src="assets/hero-hand.png?v=2" width="580" height="580" alt="A person holding a phone showing the HourlyPal app with a verified Pal's profile and hourly rate." loading="eager">
+        <div class="float-card fc-1">
+          <span class="fc-icon ic-mint" aria-hidden="true"><svg class="ico ico-sm"><use href="#i-check"/></svg></span>
+          <span>Booking accepted<small>Green Thumb, 2:00 PM</small></span>
+        </div>
+        <div class="float-card fc-2">
+          <span class="fc-icon ic-lemon" aria-hidden="true"><svg class="ico ico-sm"><use href="#i-star"/></svg></span>
+          <span>4.9 rating<small>Verified Pal</small></span>
+        </div>
+        <div class="float-card fc-3">
+          <span class="fc-icon ic-sky" aria-hidden="true"><svg class="ico ico-sm"><use href="#i-privacy"/></svg></span>
+          <span>Private chat<small>alias only</small></span>
         </div>
       </div>
     </div>
   </section>
-  <section class="stats">
-    <div class="container stats-grid">
-      <div class="stat reveal">
-        <span class="stat-number" data-count-to="500">0</span>+
-        <p>Verified Pals</p>
-      </div>
-      <div class="stat reveal">
-        <span class="stat-number" data-count-to="12">0</span>
-        <p>Cities & growing</p>
-      </div>
-      <div class="stat reveal">
-        <span class="stat-number" data-count-to="48" data-decimals="1">0</span>
-        <p>Average rating</p>
-      </div>
-    </div>
-    <p class="stats-note">Placeholder figures — replace with real numbers before launch.</p>
-  </section>
+
+  <!-- FEATURES: list + phones -->
   <section class="features" id="features">
     <div class="container">
       <div class="section-head">
-        <span class="eyebrow">Why HourlyPal</span>
-        <h2>Everything you need to hire — or become — a Pal</h2>
+        <h2>Everything you need to hire, or become, a Pal</h2>
       </div>
       <div class="features-grid">
         <div class="feature-list">
           <div class="feature-item reveal">
-            <h3><span aria-hidden="true">✓</span> Verified profiles</h3>
+            <h3><span class="fi-icon ic-indigo"><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg></span> Verified profiles</h3>
             <p>Every Pal is background-checked before their profile goes live, with a visible verified badge.</p>
           </div>
           <div class="feature-item reveal">
-            <h3><span aria-hidden="true">💬</span> Private messaging</h3>
-            <p>Chat by alias, not real name — messaging unlocks only after a booking is accepted.</p>
+            <h3><span class="fi-icon ic-sky"><svg class="ico" aria-hidden="true"><use href="#i-msg"/></svg></span> Private messaging</h3>
+            <p>Chat by alias, not real name. Messaging unlocks only after a booking is accepted.</p>
           </div>
           <div class="feature-item reveal">
-            <h3><span aria-hidden="true">⭐</span> Ratings & reviews</h3>
+            <h3><span class="fi-icon ic-lemon"><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg></span> Ratings &amp; reviews</h3>
             <p>Every completed booking can be rated, so trust builds with every job.</p>
           </div>
           <div class="feature-item reveal">
-            <h3><span aria-hidden="true">🗓️</span> Flexible scheduling</h3>
+            <h3><span class="fi-icon ic-mint"><svg class="ico" aria-hidden="true"><use href="#i-calendar"/></svg></span> Flexible scheduling</h3>
             <p>Pals set their own hours and rate; Clients book morning, afternoon, or evening slots.</p>
           </div>
         </div>
         <div class="features-visual reveal">
+          <div class="fv-blob" aria-hidden="true"></div>
           <div class="phone-frame phone-frame-back">
             <img src="assets/screens/17-messages-list.png" alt="Private in-app messaging between a Client and a Pal" loading="lazy">
           </div>
           <div class="phone-frame phone-frame-front">
-            <img src="assets/screens/14-pal-detail.png" alt="A verified Pal profile with rating and reviews" loading="lazy">
+            <img src="assets/screens/14-pal-detail.png?v=2" alt="A verified Pal profile with rating and reviews" loading="lazy">
           </div>
         </div>
       </div>
     </div>
   </section>
-  <section class="be-a-pal" id="be-a-pal">
-    <div class="container split-grid">
-      <div class="split-visual reveal">
-        <div class="phone-frame">
-          <img src="assets/screens/12-pal-home.png" alt="Pal requests inbox showing pending bookings" loading="lazy">
-        </div>
+
+  <!-- TWO SIDES OF THE MARKETPLACE -->
+  <section class="two-sides band-tint" id="be-a-pal">
+    <div class="container">
+      <div class="section-head">
+        <h2>One app, both sides of the deal</h2>
+        <p>Whether you're offering your time or booking someone else's, HourlyPal works the same simple way.</p>
       </div>
-      <div class="split-copy reveal">
-        <span class="eyebrow eyebrow-light">For Pals</span>
-        <h2>Turn your time into income</h2>
-        <ul class="check-list">
-          <li>Keep 100% of your hourly rate — HourlyPal earns through subscriptions, not a cut of your pay</li>
-          <li>Set your own rate, services, and availability</li>
-          <li>Get verified and build trust with a badge on your profile</li>
-          <li>Manage every request — accept, decline, message — in one place</li>
-        </ul>
-        <a href="#download" class="btn btn-ghost-light">Become a Pal</a>
+      <div class="sides-grid">
+        <article class="side-panel side-pal reveal">
+          <div class="side-body">
+            <span class="side-tag">For Pals</span>
+            <h3>Turn your time into income</h3>
+            <ul class="check-list">
+              <li>Keep 100% of your hourly rate. HourlyPal earns through subscriptions, not a cut of your pay</li>
+              <li>Set your own rate, services, and availability</li>
+              <li>Build trust with a verified badge on your profile</li>
+            </ul>
+            <a href="#download" class="btn btn-primary">Become a Pal</a>
+          </div>
+          <div class="side-phone">
+            <div class="phone-frame">
+              <img src="assets/screens/12-pal-home.png" alt="Pal requests inbox showing pending bookings" loading="lazy">
+            </div>
+          </div>
+        </article>
+        <article class="side-panel side-client reveal" id="hire-a-pal">
+          <div class="side-body">
+            <span class="side-tag side-tag-dark">For Clients</span>
+            <h3>Help, on your schedule</h3>
+            <ul class="check-list">
+              <li>Search by service, location, and availability</li>
+              <li>Message privately using an alias until you choose to share more</li>
+              <li>Book by the hour with no long-term commitment</li>
+            </ul>
+            <a href="#download" class="btn btn-light">Hire a Pal</a>
+          </div>
+          <div class="side-phone">
+            <div class="phone-frame">
+              <img src="assets/screens/client-filters.png" alt="HourlyPal filters for location, services, and availability" loading="lazy">
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
-  <section class="hire-a-pal" id="hire-a-pal">
-    <div class="container split-grid split-grid-reverse">
-      <div class="split-copy reveal">
-        <span class="eyebrow">For Clients</span>
-        <h2>Help, on your schedule</h2>
-        <ul class="check-list check-list-dark">
-          <li>Search by service, location, and availability</li>
-          <li>Message privately using an alias — your identity stays yours until you choose to share it</li>
-          <li>Book by the hour with no long-term commitment</li>
-          <li>Rate and review every completed booking</li>
-        </ul>
-        <a href="#download" class="btn btn-primary">Hire a Pal</a>
+
+  <!-- TRUST BENTO -->
+  <section class="trust-section" id="trust">
+    <div class="container">
+      <div class="section-head">
+        <h2>Loaded with trust, from end to end</h2>
+        <p>Every part of HourlyPal is built around a simple idea: you should feel safe hiring, or becoming, a Pal.</p>
       </div>
-      <div class="split-visual reveal">
-        <div class="phone-frame">
-          <img src="assets/screens/20-search-results.png" alt="Search results showing nearby Pals" loading="lazy">
+      <div class="trust-bento">
+        <div class="tb tb-a reveal">
+          <div class="fi-icon ic-dark"><svg class="ico" aria-hidden="true"><use href="#i-shield"/></svg></div>
+          <h3>Background checks come standard</h3>
+          <p>Every Pal is verified before their profile goes live, and a visible badge shows their status, so you always know who you're dealing with.</p>
+        </div>
+        <div class="tb tb-b reveal">
+          <div class="fi-icon ic-indigo"><svg class="ico" aria-hidden="true"><use href="#i-privacy"/></svg></div>
+          <h3>Alias privacy</h3>
+          <p>Your real name stays private. You're known by the alias you choose.</p>
+        </div>
+        <div class="tb tb-c reveal">
+          <div class="fi-icon ic-sky"><svg class="ico" aria-hidden="true"><use href="#i-lock"/></svg></div>
+          <h3>In-app messaging</h3>
+          <p>Conversations unlock only after a booking is accepted.</p>
+        </div>
+        <div class="tb tb-d reveal">
+          <div class="fi-icon ic-peach"><svg class="ico" aria-hidden="true"><use href="#i-ban"/></svg></div>
+          <h3>Block &amp; report</h3>
+          <p>Block or report any user in one tap, right from a chat.</p>
+        </div>
+        <div class="tb tb-e reveal">
+          <div class="fi-icon ic-lemon"><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg></div>
+          <h3>Ratings &amp; reviews</h3>
+          <p>Every booking can be rated, so quality stays high.</p>
+        </div>
+        <div class="tb tb-f reveal">
+          <div class="tb-f-copy">
+            <div class="fi-icon ic-indigo"><svg class="ico" aria-hidden="true"><use href="#i-card"/></svg></div>
+            <div>
+              <h3>Simple, honest billing</h3>
+              <p>Billed securely through the App Store or Google Play. Cancel anytime, no surprises.</p>
+            </div>
+          </div>
+          <a href="#pricing" class="btn btn-light">See pricing</a>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- SERVICE CATEGORIES -->
   <section class="categories" id="categories">
     <div class="container">
       <div class="section-head">
-        <span class="eyebrow">Available today</span>
         <h2>Services you can book right now</h2>
+        <p>Five ways to get help today, with more on the way as HourlyPal reaches new cities.</p>
       </div>
-      <div class="category-grid">
-        <div class="category-card reveal">
-          <div class="category-icon" aria-hidden="true">🛒</div>
+      <div class="service-grid">
+        <article class="service-card sv-sky reveal">
+          <span class="sv-icon"><svg class="ico" aria-hidden="true"><use href="#i-cart"/></svg></span>
           <h3>Personal Assistant</h3>
-          <p>Everyday errands: grocery shopping, pet walking, dry cleaning, chores.</p>
-        </div>
-        <div class="category-card reveal">
-          <div class="category-icon" aria-hidden="true">💪</div>
+          <p>Everyday errands: grocery runs, pet walking, dry cleaning, and chores.</p>
+          <span class="sv-go">Browse Pals<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+        </article>
+        <article class="service-card sv-peach reveal">
+          <span class="sv-icon"><svg class="ico" aria-hidden="true"><use href="#i-activity"/></svg></span>
           <h3>Personal Trainer</h3>
-          <p>Physical fitness on your schedule.</p>
-        </div>
-        <div class="category-card reveal">
-          <div class="category-icon" aria-hidden="true">📚</div>
+          <p>Coaching and fitness sessions that fit around your week.</p>
+          <span class="sv-go">Browse Pals<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+        </article>
+        <article class="service-card sv-lilac reveal">
+          <span class="sv-icon"><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg></span>
           <h3>Tutor de Jour</h3>
-          <p>Your favorite teacher is a click away.</p>
-        </div>
-        <div class="category-card reveal">
-          <div class="category-icon" aria-hidden="true">🌱</div>
+          <p>Your favorite teacher, a tap away, for any subject.</p>
+          <span class="sv-go">Browse Pals<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+        </article>
+        <article class="service-card sv-mint reveal">
+          <span class="sv-icon"><svg class="ico" aria-hidden="true"><use href="#i-leaf"/></svg></span>
           <h3>Green Thumb</h3>
-          <p>A helping hand and expert advice with gardening.</p>
-        </div>
-        <div class="category-card reveal">
-          <div class="category-icon" aria-hidden="true">🗺️</div>
+          <p>Hands-on help and expert advice for your garden.</p>
+          <span class="sv-go">Browse Pals<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+        </article>
+        <article class="service-card sv-lemon reveal">
+          <span class="sv-icon"><svg class="ico" aria-hidden="true"><use href="#i-map"/></svg></span>
           <h3>Tour Guide</h3>
-          <p>Show visitors around your favorite places.</p>
-        </div>
+          <p>Locals who show visitors around their favorite places.</p>
+          <span class="sv-go">Browse Pals<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+        </article>
       </div>
-      <p class="categories-note">More services are on the way as HourlyPal expands to new cities.</p>
     </div>
   </section>
-  <section class="how-it-works" id="how-it-works">
+
+  <!-- HOW IT WORKS -->
+  <section class="how-it-works band-tint" id="how-it-works">
     <div class="container">
       <div class="section-head">
-        <span class="eyebrow">How it works</span>
         <h2>Simple for Clients. Simple for Pals.</h2>
       </div>
       <div class="how-grid">
         <div class="how-column reveal">
           <h3>As a Client</h3>
           <ol class="step-list">
-            <li><strong>Search & filter</strong> — find Pals by service, location, and availability.</li>
-            <li><strong>Send a request</strong> — pick a date, a time slot, and add an optional note.</li>
-            <li><strong>Message & meet</strong> — chat privately once your Pal accepts.</li>
-            <li><strong>Rate & review</strong> — share how it went after the booking is complete.</li>
+            <li><strong>Search &amp; filter</strong> Find Pals by service, location, and availability.</li>
+            <li><strong>Send a request</strong> Pick a date, a time slot, and add an optional note.</li>
+            <li><strong>Message &amp; meet</strong> Chat privately once your Pal accepts.</li>
+            <li><strong>Rate &amp; review</strong> Share how it went after the booking is complete.</li>
           </ol>
         </div>
         <div class="how-visual reveal">
@@ -213,97 +292,94 @@
         <div class="how-column reveal">
           <h3>As a Pal</h3>
           <ol class="step-list">
-            <li><strong>Apply & get verified</strong> — complete a profile and background check.</li>
-            <li><strong>Set your rate & schedule</strong> — you're always in control.</li>
-            <li><strong>Accept requests</strong> — review and accept bookings that fit your availability.</li>
-            <li><strong>Get paid</strong> — keep 100% of your hourly rate.</li>
+            <li><strong>Apply &amp; get verified</strong> Complete a profile and background check.</li>
+            <li><strong>Set your rate &amp; schedule</strong> You're always in control.</li>
+            <li><strong>Accept requests</strong> Review and accept bookings that fit your availability.</li>
+            <li><strong>Get paid</strong> Keep 100% of your hourly rate.</li>
           </ol>
         </div>
       </div>
     </div>
   </section>
-  <section class="trust" id="trust">
-    <div class="container trust-grid">
-      <div class="reveal">
-        <span class="eyebrow eyebrow-light">Safety first</span>
-        <h2>Trust comes standard</h2>
-        <p class="trust-sub">Every part of HourlyPal is built around a simple idea: you should feel safe hiring — or becoming — a Pal.</p>
-      </div>
-      <div class="trust-cards">
-        <div class="trust-card reveal">
-          <h3><span aria-hidden="true">✅</span> Background checks</h3>
-          <p>Every Pal is verified before their profile goes live, and a visible badge shows their status.</p>
-        </div>
-        <div class="trust-card reveal">
-          <h3><span aria-hidden="true">🔒</span> In-app messaging</h3>
-          <p>Conversations only unlock after a booking is accepted — no phone numbers shared upfront.</p>
-        </div>
-        <div class="trust-card reveal">
-          <h3><span aria-hidden="true">🕶️</span> Alias privacy</h3>
-          <p>Your real name stays private; you're known on HourlyPal by the alias you choose.</p>
-        </div>
-        <div class="trust-card reveal">
-          <h3><span aria-hidden="true">🚫</span> Block & report</h3>
-          <p>Block or report any user in one tap, right from a conversation.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+
+  <!-- TESTIMONIALS (dark) -->
   <section class="testimonials" id="testimonials">
     <div class="container">
       <div class="section-head">
-        <span class="eyebrow">What people are saying</span>
         <h2>Loved by Clients and Pals</h2>
-        <p class="placeholder-note">Placeholder quotes — replace with real customer testimonials before launch.</p>
+        <p class="placeholder-note">Placeholder quotes. Replace with real customer testimonials before launch.</p>
       </div>
       <div class="testimonial-grid">
         <div class="testimonial-card reveal">
-          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <div class="stars" aria-label="5 out of 5 stars"><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg></div>
           <p>"Booking a tutor for my son took five minutes, and the messaging felt safe the whole time."</p>
-          <span class="testimonial-name">— Client, New York</span>
+          <span class="testimonial-name">Marisol A., Client in New York</span>
         </div>
         <div class="testimonial-card reveal">
-          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <div class="stars" aria-label="5 out of 5 stars"><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg></div>
           <p>"I set my own rate and schedule as a personal trainer, and I keep every dollar I earn."</p>
-          <span class="testimonial-name">— Pal, Austin</span>
+          <span class="testimonial-name">Devon K., Pal in Austin</span>
         </div>
         <div class="testimonial-card reveal">
-          <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <div class="stars" aria-label="5 out of 5 stars"><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg></div>
           <p>"The verification badge made me comfortable letting someone into my garden while I was at work."</p>
-          <span class="testimonial-name">— Client, Denver</span>
+          <span class="testimonial-name">Hannah W., Client in Denver</span>
         </div>
+        <div class="testimonial-card reveal">
+          <div class="stars" aria-label="5 out of 5 stars"><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg><svg class="ico" aria-hidden="true"><use href="#i-star"/></svg></div>
+          <p>"Alias messaging is genuinely thoughtful. I felt in control of my privacy the entire booking."</p>
+          <span class="testimonial-name">Theo N., Client in Seattle</span>
+        </div>
+      </div>
+      <div class="testimonials-cta">
+        <a href="#download" class="btn btn-primary">Join HourlyPal</a>
       </div>
     </div>
   </section>
+
+  <!-- PRICING -->
   <section class="pricing" id="pricing">
     <div class="container">
       <div class="section-head">
-        <span class="eyebrow">Pricing</span>
-        <h2>Simple pricing for Clients and Pals</h2>
-        <p>The same plans apply whether you're hiring a Pal or becoming one. Billed through the App Store or Google Play — cancel anytime from your account settings.</p>
+        <h2>Simple pricing, built to scale with you</h2>
+        <p>The same plan applies whether you're hiring a Pal or becoming one. Billed through the App Store or Google Play, cancel anytime.</p>
+      </div>
+      <div style="text-align:center;">
+        <div class="pricing-toggle" id="pricingToggle" role="group" aria-label="Billing period">
+          <span class="toggle-thumb" aria-hidden="true"></span>
+          <button class="is-active" data-plan="month" aria-pressed="true">Monthly</button>
+          <button data-plan="year" aria-pressed="false">Yearly</button>
+          <span class="toggle-save">Save 15%</span>
+        </div>
       </div>
       <div class="pricing-grid">
         <div class="price-card reveal">
-          <h3>Monthly</h3>
-          <p class="price">$39<span>/month</span></p>
+          <h3>Starter</h3>
+          <p class="price">
+            <span class="price-amount" data-plan="month">$39<span>/month</span></span>
+            <span class="price-amount" data-plan="year" hidden>$399<span>/year</span></span>
+          </p>
           <p class="price-trial">Start with 2 months free</p>
-          <ul class="check-list check-list-dark">
+          <ul class="check-list">
             <li>Discover or offer help in your area</li>
             <li>Message privately using an alias</li>
             <li>Request or accept bookings by the hour</li>
-            <li>Manage everything in one place</li>
+            <li>Ratings, reviews &amp; block/report tools</li>
           </ul>
-          <a href="#download" class="btn btn-secondary">Get Started</a>
+          <a href="#download" class="btn btn-light">Get Started</a>
         </div>
         <div class="price-card price-card-featured reveal">
-          <span class="price-badge">Save more</span>
-          <h3>Yearly</h3>
-          <p class="price">$399<span>/year</span></p>
+          <span class="price-badge">Best value</span>
+          <h3>Pro</h3>
+          <p class="price">
+            <span class="price-amount" data-plan="month">$39<span>/month</span></span>
+            <span class="price-amount" data-plan="year" hidden>$399<span>/year</span></span>
+          </p>
           <p class="price-trial">Start with 2 months free</p>
-          <ul class="check-list check-list-dark">
-            <li>Discover or offer help in your area</li>
-            <li>Message privately using an alias</li>
-            <li>Request or accept bookings by the hour</li>
+          <ul class="check-list">
+            <li>Everything in Starter, plus:</li>
+            <li>Priority placement in search results</li>
+            <li>Verified badge &amp; profile highlights</li>
             <li>Manage everything in one place</li>
           </ul>
           <a href="#download" class="btn btn-primary">Get Started</a>
@@ -311,59 +387,61 @@
       </div>
     </div>
   </section>
-  <section class="faq" id="faq">
+
+  <!-- FAQ -->
+  <section class="faq band-tint" id="faq">
     <div class="container">
       <div class="section-head">
-        <span class="eyebrow">FAQ</span>
         <h2>Frequently asked questions</h2>
       </div>
       <div class="faq-list" id="faqList">
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
             How does Pal verification work?
-            <span class="faq-icon" aria-hidden="true">+</span>
+            <span class="faq-icon" aria-hidden="true"><svg class="ico"><use href="#i-plus"/></svg></span>
           </button>
           <div class="faq-answer"><p>Every Pal completes a profile and a background check before their account goes live. Verified Pals show a badge on their profile.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
             How much does HourlyPal cost?
-            <span class="faq-icon" aria-hidden="true">+</span>
+            <span class="faq-icon" aria-hidden="true"><svg class="ico"><use href="#i-plus"/></svg></span>
           </button>
           <div class="faq-answer"><p>$39/month or $399/year, with 2 months free to start. The same plan applies to Clients and Pals, billed through the App Store or Google Play.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
             Is my identity private?
-            <span class="faq-icon" aria-hidden="true">+</span>
+            <span class="faq-icon" aria-hidden="true"><svg class="ico"><use href="#i-plus"/></svg></span>
           </button>
           <div class="faq-answer"><p>Yes. You're shown to others by the alias you choose, and messaging only unlocks after a booking is accepted.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
             What services are available today?
-            <span class="faq-icon" aria-hidden="true">+</span>
+            <span class="faq-icon" aria-hidden="true"><svg class="ico"><use href="#i-plus"/></svg></span>
           </button>
           <div class="faq-answer"><p>Personal Assistant, Personal Trainer, Tutor de Jour, Green Thumb, and Tour Guide, with more services coming as HourlyPal expands to new cities.</p></div>
         </div>
         <div class="faq-item">
           <button class="faq-question" aria-expanded="false">
             How do I cancel my subscription?
-            <span class="faq-icon" aria-hidden="true">+</span>
+            <span class="faq-icon" aria-hidden="true"><svg class="ico"><use href="#i-plus"/></svg></span>
           </button>
-          <div class="faq-answer"><p>Cancel anytime from your Apple App Store or Google Play account settings — HourlyPal doesn't handle billing directly.</p></div>
+          <div class="faq-answer"><p>Cancel anytime from your Apple App Store or Google Play account settings. HourlyPal doesn't handle billing directly.</p></div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- FINAL CTA -->
   <section class="final-cta" id="download">
     <div class="container final-cta-inner reveal">
       <h2>Ready to find your Pal?</h2>
       <p>Download HourlyPal and start booking trusted local help today.</p>
-      <div class="hero-ctas final-cta-ctas">
-        <a href="#" class="btn btn-ghost-light">Download on the App Store</a>
-        <a href="#" class="btn btn-ghost-light">Get it on Google Play</a>
+      <div class="final-cta-ctas">
+        <a class="btn btn-dark" aria-disabled="true" title="App Store link coming soon">Download on the App Store</a>
+        <a class="btn btn-light" aria-disabled="true" title="Google Play link coming soon">Get it on Google Play</a>
       </div>
     </div>
   </section>
@@ -373,7 +451,7 @@
     <div class="container footer-grid">
       <div class="footer-brand">
         <a href="#top" class="nav-logo footer-logo">
-          <img src="assets/logo.png" alt="HourlyPal" width="32" height="32">
+          <img src="assets/logo.png" alt="HourlyPal" width="30" height="30">
           <span>HourlyPal</span>
         </a>
         <p>Trusted local help, by the hour.</p>
@@ -386,22 +464,24 @@
       </div>
       <div class="footer-col">
         <h4>Company</h4>
-        <a href="#">About</a>
-        <a href="#">Careers</a>
-        <a href="#">Contact</a>
+        <a href="about.html">About</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html">Contact</a>
       </div>
       <div class="footer-col">
         <h4>Legal</h4>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Use</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms-of-use.html">Terms of Use</a>
+        <a href="support.html">Support &amp; Help</a>
       </div>
       <div class="footer-newsletter">
         <h4>Stay in the loop</h4>
         <form id="newsletterForm" novalidate>
-          <input type="email" id="newsletterEmail" placeholder="you@example.com" aria-label="Email address">
+          <label for="newsletterEmail" class="skip-link">Email address</label>
+          <input type="email" id="newsletterEmail" autocomplete="email" placeholder="you@example.com" aria-label="Email address">
           <button type="submit" class="btn btn-primary">Sign Up</button>
         </form>
-        <p class="form-message" id="newsletterMessage" role="status"></p>
+        <p class="form-message" id="newsletterMessage" role="status" aria-live="polite"></p>
       </div>
     </div>
     <div class="container footer-bottom">
@@ -409,8 +489,6 @@
     </div>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script type="module" src="js/main.js"></script>
 </body>
 </html>

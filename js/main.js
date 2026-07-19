@@ -95,6 +95,29 @@ function initFaq() {
 
 initFaq();
 
+function initPricingToggle() {
+  const toggle = document.getElementById('pricingToggle');
+  if (!toggle) return;
+  const buttons = Array.from(toggle.querySelectorAll('button'));
+
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const plan = button.dataset.plan;
+      buttons.forEach((b) => {
+        const active = b === button;
+        b.classList.toggle('is-active', active);
+        b.setAttribute('aria-pressed', String(active));
+      });
+      toggle.classList.toggle('year', plan === 'year');
+      document.querySelectorAll('.price-amount').forEach((el) => {
+        el.hidden = el.dataset.plan !== plan;
+      });
+    });
+  });
+}
+
+initPricingToggle();
+
 function initNewsletter() {
   const form = document.getElementById('newsletterForm');
   const input = document.getElementById('newsletterEmail');
@@ -117,29 +140,33 @@ initNewsletter();
 
 function initScrollReveals() {
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const revealEls = document.querySelectorAll('.reveal');
+  const revealEls = Array.from(document.querySelectorAll('.reveal'));
 
-  if (reduceMotion || typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
+  // Content is visible by default. Only opt into the animated state when we can
+  // both animate (motion allowed) and observe (IntersectionObserver present).
+  if (reduceMotion || !('IntersectionObserver' in window)) {
     return;
   }
 
-  gsap.registerPlugin(ScrollTrigger);
-  revealEls.forEach((el) => {
-    const siblingIndex = Array.from(el.parentElement.children).indexOf(el);
-    gsap.set(el, { opacity: 0, y: 24 });
-    gsap.to(el, {
-      opacity: 1,
-      y: 0,
-      duration: 0.7,
-      ease: 'power2.out',
-      delay: (siblingIndex % 4) * 0.08,
-      scrollTrigger: { trigger: el, start: 'top 88%' },
-    });
-  });
+  // Enables the hidden start-state CSS (.js .reveal { opacity: 0 }).
+  document.documentElement.classList.add('js');
 
-  document.querySelectorAll('img[loading="lazy"]').forEach((img) => {
-    img.addEventListener('load', () => ScrollTrigger.refresh());
-  });
+  const reveal = (el) => el.classList.add('is-in');
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        reveal(entry.target);
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+
+  revealEls.forEach((el) => observer.observe(el));
+
+  // Failsafe: never leave content hidden. If anything stalls (background tab,
+  // headless render), reveal everything after a short window.
+  window.setTimeout(() => revealEls.forEach(reveal), 2500);
 }
 
 initScrollReveals();
