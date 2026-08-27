@@ -33,6 +33,11 @@
     <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></symbol>
     <symbol id="i-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol>
     <symbol id="i-map" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.1 5.55a2 2 0 0 0 1.8 0l3.65-1.83A1 1 0 0 1 21 4.62v12.76a1 1 0 0 1-.55.9l-4.55 2.27a2 2 0 0 1-1.8 0l-4.2-2.1a2 2 0 0 0-1.8 0l-3.65 1.82A1 1 0 0 1 3 19.38V6.62a1 1 0 0 1 .55-.9L8.1 3.46a2 2 0 0 1 1.8 0z"/><path d="M15 5.76v15M9 3.24v15"/></symbol>
+    <symbol id="i-chef" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21a1 1 0 0 0 1-1v-5.35c0-.457.316-.844.727-1.041a4 4 0 0 0-2.134-7.589 5 5 0 0 0-9.186 0 4 4 0 0 0-2.134 7.588c.411.198.727.585.727 1.041V20a1 1 0 0 0 1 1Z"/><path d="M6 17h12"/></symbol>
+    <symbol id="i-wrench" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
+    <symbol id="i-userplus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></symbol>
+    <symbol id="i-car" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></symbol>
+    <symbol id="i-scissors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/></symbol>
     <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></symbol>
     <symbol id="i-play" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
@@ -231,9 +236,11 @@
     <div class="container">
       <div class="section-head">
         <h2>Services you can book right now</h2>
-        <p>Five ways to get help today, with more on the way as HourlyPal reaches new cities.</p>
+        <p>Ten ways to get help today, with more on the way as HourlyPal reaches new cities.</p>
       </div>
-      <div class="service-grid">
+      <div class="service-carousel">
+        <button class="carousel-arrow carousel-prev" type="button" aria-label="Scroll services left" disabled><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        <div class="service-grid" id="serviceTrack" tabindex="0" role="group" aria-label="Service categories, scrollable">
         <article class="service-card sv-sky reveal">
           <span class="sv-icon"><svg class="ico" aria-hidden="true"><use href="#i-cart"/></svg></span>
           <h3>Personal Assistant</h3>
@@ -264,6 +271,38 @@
           <p>Locals who show visitors around their favorite places.</p>
           <span class="sv-go">Browse Pals<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
         </article>
+        <article class="service-card sv-sky reveal">
+          <span class="sv-icon"><svg class="ico" aria-hidden="true"><use href="#i-chef"/></svg></span>
+          <h3>Chef to Go</h3>
+          <p>Private chefs who shop, cook, and serve right in your kitchen.</p>
+          <span class="sv-go">Browse Pals<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+        </article>
+        <article class="service-card sv-peach reveal">
+          <span class="sv-icon"><svg class="ico" aria-hidden="true"><use href="#i-wrench"/></svg></span>
+          <h3>DIY Plus</h3>
+          <p>Handy help for repairs, assembly, and home projects big or small.</p>
+          <span class="sv-go">Browse Pals<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+        </article>
+        <article class="service-card sv-lilac reveal">
+          <span class="sv-icon"><svg class="ico" aria-hidden="true"><use href="#i-userplus"/></svg></span>
+          <h3>Plus One</h3>
+          <p>A friendly companion for events, dinners, and days out.</p>
+          <span class="sv-go">Browse Pals<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+        </article>
+        <article class="service-card sv-mint reveal">
+          <span class="sv-icon"><svg class="ico" aria-hidden="true"><use href="#i-car"/></svg></span>
+          <h3>Your Ride</h3>
+          <p>Personal drivers by the hour for errands, appointments, and trips.</p>
+          <span class="sv-go">Browse Pals<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+        </article>
+        <article class="service-card sv-lemon reveal">
+          <span class="sv-icon"><svg class="ico" aria-hidden="true"><use href="#i-scissors"/></svg></span>
+          <h3>Beautician</h3>
+          <p>Hair, nails, and beauty services that come to you.</p>
+          <span class="sv-go">Browse Pals<svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></span>
+        </article>
+        </div>
+        <button class="carousel-arrow carousel-next" type="button" aria-label="Scroll services right"><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button>
       </div>
     </div>
   </section>

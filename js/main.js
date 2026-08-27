@@ -138,6 +138,35 @@ function initNewsletter() {
 
 initNewsletter();
 
+function initServiceCarousel() {
+  const track = document.getElementById('serviceTrack');
+  if (!track) return;
+  const prev = document.querySelector('.carousel-prev');
+  const next = document.querySelector('.carousel-next');
+
+  const step = () => {
+    const card = track.querySelector('.service-card');
+    if (!card) return track.clientWidth;
+    const gap = parseFloat(getComputedStyle(track).gap) || 0;
+    return card.offsetWidth + gap;
+  };
+
+  const updateArrows = () => {
+    // Snap can settle a few px in (track padding), so use a small tolerance.
+    const maxScroll = track.scrollWidth - track.clientWidth;
+    prev.disabled = track.scrollLeft <= 8;
+    next.disabled = track.scrollLeft >= maxScroll - 8;
+  };
+
+  prev.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
+  next.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }));
+  track.addEventListener('scroll', updateArrows, { passive: true });
+  window.addEventListener('resize', updateArrows, { passive: true });
+  updateArrows();
+}
+
+initServiceCarousel();
+
 function initScrollReveals() {
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const revealEls = Array.from(document.querySelectorAll('.reveal'));
